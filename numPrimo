@@ -1,21 +1,17 @@
 
 object numPrimo{
 
-  def verifPrimo(x: Int, n: Int): Int = {
-    def div(x: Int, n: Int = x): Int = { 
-      if(n != 0){
-        if(x % n !=0)
-        {
-          div(x, x-1)
-        }
-        if(n == 1) return 1;
-        else return 0
+  def verifPrimo(x: Int): Unit = {
+    println("ENTROU se primo")
+    def div(x: Int, n: Int = x-1): Unit = { 
+      if((x % n) !=0) div(x, x-1)
+      else if(n == 1) println("É primo!!")
+      else println("NÃO é primo!!")
       }
     }
-    return 1
-  }
-  
-  def main(args: Array[String]){
+    
+  def main(args: Array[String]): Unit = {
     println("Verificando se primo")
+    verifPrimo(Array(1))
   }
 }
