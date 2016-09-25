@@ -1,0 +1,24 @@
+//Implementar uma função que descobre qual o primeiro número divisível por todos os números de 1 a 10
+
+object findNumber{
+
+	def calc(): Unit = {
+	div(10,1)
+	def div(n:Int, d:Int): Unit = {
+		if((n%d) ==0){
+			if(d==10){
+				println(n) 
+				printf("Numero perfeito")
+			}
+			else div(n,d+1)
+		} 
+		else div(n+1,1)
+	}
+	}
+
+	def main(args: Array[String]): Unit = {
+		println("Find Number")
+		calc()
+	}
+
+}
